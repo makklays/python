@@ -1,3 +1,7 @@
+# Author: Alexander Kuziv <makklays@gmail.com>
+# Date: 04.01.2026
+# Script to scanning local network for connected devices using ARP requests.
+
 from scapy.all import ARP, Ether, srp, conf
 
 conf.verb = 0
