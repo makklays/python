@@ -1,0 +1,67 @@
+
+Для работы с PostgreSQL в Python - самая популярная библиотека — SQLAlchemy (версии 2.0+) в связке с драйверами.
+
+Установка:
+# Для синхронного подхода (драйвер psycopg)
+pip install sqlalchemy psycopg
+
+# Для асинхронного подхода (драйвер asyncpg)
+pip install sqlalchemy asyncpg
+
+#------ пример синхронный ------------
+from sqlalchemy import create_engine, text
+from sqlalchemy.orm import sessionmaker
+
+# Ссылка для подключения (используется драйвер psycopg)
+DATABASE_URL = "postgresql+psycopg://user:password@localhost:5432/dbname"
+
+# 1. Создаем синхронный движок
+engine = create_engine(DATABASE_URL, echo=True)
+
+# 2. Создаем фабрику сессий
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+
+def get_db_version():
+    # Открываем сессию
+    with SessionLocal() as session:
+        result = session.execute(text("SELECT VERSION();"))
+        version = result.scalar()
+        print(f"Версия PostgreSQL: {version}")
+
+if __name__ == "__main__":
+    get_db_version()
+#---------------------------
+      
+#----- пример FastAPI (Современный и асинхронный) -------------
+from fastapi import FastAPI, Depends
+from sqlalchemy.ext.asyncio import AsyncSession
+# Предположим, db_session и Product — это настроенная SQLAlchemy из прошлых шагов
+
+app = FastAPI()
+
+@app.get("/products/{product_id}")
+async def get_product(product_id: int, db: AsyncSession = Depends(get_db_session)):
+    # Функция автоматически получает безопасное соединение с PostgreSQL 'db'
+    result = await db.execute(select(Product).where(Product.id == product_id))
+    return result.scalar_one_or_none()
+#---------------------------
+
+В ML-проектах никто не перебирает строки базы данных в цикле. Вместо этого используют библиотеку Pandas, которая в одну строчку 
+умеет забирать данные из PostgreSQL (через движок SQLAlchemy) и превращать их в DataFrame.
+
+#------ пример -------------
+import torch
+import pandas as pd
+from sqlalchemy import create_engine
+
+# 1. Создаем подключение к PostgreSQL
+engine = create_engine("postgresql+psycopg://user:password@localhost:5432/dbname")
+
+# 2. Выкачиваем данные из БД сразу в таблицу Pandas DataFrame
+df = pd.read_sql("SELECT feature1, feature2, target FROM training_data", con=engine)
+
+# 3. Превращаем в тензоры PyTorch для обучения
+X = torch.tensor(df[['feature1', 'feature2']].values, dtype=torch.float32)
+y = torch.tensor(df['target'].values, dtype=torch.float32)
+#---------------------------
+
