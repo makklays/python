@@ -65,3 +65,6 @@ X = torch.tensor(df[['feature1', 'feature2']].values, dtype=torch.float32)
 y = torch.tensor(df['target'].values, dtype=torch.float32)
 #---------------------------
 
+
+//
+
