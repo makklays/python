@@ -8,6 +8,8 @@
 
 Unos pocos scripts para la red 🇪🇸 
 
+# AI Software Engineer 
+
 #### Data Science Stack
 - **NumPy**  - (работа с многомерными массивами (тензорами), матричные вычисления и линейная алгебра)
 - **Pandas** - (загрузка, очистка, фильтрация и анализ табличных данных (CSV, SQL, Excel))
