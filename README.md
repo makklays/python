@@ -4,13 +4,13 @@
 Unos pocos scripts para la red 🇪🇸 
 
 #### Data Science Stack
-NumPy
-Pandas
-Matplotlib / Seaborn
+- NumPy
+- Pandas
+- Matplotlib / Seaborn
 
 #### Machine Learning
-Scikit-learn
-XGBoost / LightGBM / CatBoost
+- Scikit-learn
+- XGBoost / LightGBM / CatBoost
 
 #### Deep Learning
 PyTorch
