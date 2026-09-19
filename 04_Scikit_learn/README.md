@@ -25,7 +25,7 @@ Scikit-learn охватывает весь цикл создания класс�
 
 Пример кода (предсказание):
 
-```
+```python
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import RandomForestClassifier
