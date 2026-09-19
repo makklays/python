@@ -32,7 +32,7 @@ import seaborn as sns
 sns.set_theme()
 
 # Данные: номера эпох обучения и значения ошибки (Loss)
-epochs =
+epochs = [1, 2, 3, 4, 5]
 loss_values = [0.95, 0.62, 0.38, 0.19, 0.08]
 
 # Создаем размер холста
