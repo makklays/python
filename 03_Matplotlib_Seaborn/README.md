@@ -24,7 +24,7 @@
 
 Простой код на Matplotlib и Seaborn, который строит базовый график обучения модели (динамику падения ошибки от эпохи к эпохе):
 
-```
+```python
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -51,3 +51,26 @@ plt.legend()
 plt.show()
 ```
 
+Или 
+
+```python
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# DataFrames containing liquidity information for an asset in both markets
+exchange_data = pd.read_csv('exchange_liquidity.csv')
+otc_data = pd.read_csv('otc_liquidity.csv')
+
+# Plotting the liquidity distributions
+plt.figure(figsize=(14, 7))
+sns.kdeplot(exchange_data['liquidity'], label='Exchange-Traded',
+shade=True)
+sns.kdeplot(otc_data['liquidity'], label='OTC', shade=True)
+
+plt.title('Liquidity Distribution Across Market Types')
+plt.xlabel('Liquidity')
+plt.ylabel('Frequency')
+
+plt.legend()
+plt.show()
+```
