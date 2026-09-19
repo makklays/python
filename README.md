@@ -1,30 +1,35 @@
+# Python 🧠
+
+```
+Будущее уже наступило. Твоя задача — научить его думать.
+```
 
 ### Python scripts 🧠🕷️🕸️
 
 Unos pocos scripts para la red 🇪🇸 
 
 #### Data Science Stack
-- NumPy
-- Pandas
-- Matplotlib / Seaborn
+- NumPy  - (работа с многомерными массивами (тензорами), матричные вычисления и линейная алгебра)
+- Pandas - (загрузка, очистка, фильтрация и анализ табличных данных (CSV, SQL, Excel))
+- Matplotlib / Seaborn - (визуализация данных, построение графиков обучения моделей и распределения признаков)
 
 #### Machine Learning
-- Scikit-learn
-- XGBoost / LightGBM / CatBoost
+- Scikit-learn - (главная библиотека для базового ML. Содержит инструменты для регрессии, классификации, кластеризации, а также для нормализации и подготовки данных)
+- XGBoost / LightGBM / CatBoost - (библиотеки градиентного бустинга. Они критически важны для работы с табличными данными и часто работают эффективнее нейросетей в таких задачах)
 
 #### Deep Learning
-- PyTorch
-- TensorFlow / Keras
-- Hugging Face (Transformers, Accelerate, Datasets)
+- PyTorch - (индустриальный стандарт в сфере AI-исследований и разработки. Большинство современных моделей (включая LLM) пишутся на нем)
+- TensorFlow / Keras - (альтернатива от Google. Сейчас чаще встречается в унаследованном (legacy) коде крупных корпораций или в мобильном AI (TensorFlow Lite))
+- Hugging Face (Transformers, Accelerate, Datasets) - (главная экосистема для работы с готовыми предобученными моделями (LLM, Vision, Audio). AI Engineer проводит здесь огромное количество времени)
 
 #### LLM & GenAI
-- LangChain / LlamaIndex
-- OpenAI Python SDK / Anthropic SDK
-- Векторные базы данных
+- LangChain / LlamaIndex - (фреймворки для создания приложений на базе LLM, создания агентов и работы с памятью)
+- OpenAI Python SDK / Anthropic SDK - (официальные библиотеки для интеграции коммерческих API (ChatGPT, Claude))
+- Векторные базы данных  - (Библиотеки для работы с ChromaDB, Pinecone, Qdrant или FAISS (критично для создания систем RAG — Retrieval-Augmented Generation)) 
 
 #### MLOps
-- FastAPI 
-- Streamlit / Gradio
-- Pydantic
-- MLflow / Weights & Biases (W&B)
+- FastAPI - (лучший современный фреймворк для создания микросервисов и API для ваших моделей)
+- Streamlit / Gradio - (библиотеки для быстрого создания UI-интерфейсов. Позволяют за 20 строк кода сделать веб-страницу для демонстрации работы вашей модели)
+- Pydantic - (валидация данных (активно используется в FastAPI и LangChain))
+- MLflow / Weights & Biases (W&B) - (инструменты для логирования экспериментов и трекинга метрик обучения)
 
