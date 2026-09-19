@@ -21,10 +21,31 @@
 
 Пример кода (посчитать среднюю зарплату сотрудников):
 
-```
+```python
 import pandas as pd
 
 df = pd.read_csv('employees.csv')
 print(df['Salary'].mean())  # Готово!
 ```
+или 
 
+```python
+import pandas as pd
+
+# Load order book snapshot into a DataFrame
+order_book = pd.read_csv('order_book.csv')# Calculate the cumulative volume of bids and asks
+
+order_book['cum_bid_volume'] = order_book[order_book['side'] == 'bid']
+['volume'].cumsum()
+order_book['cum_ask_volume'] = order_book[order_book['side'] == 'ask']
+['volume'].cumsum()
+
+# Detect imbalance when the cumulative bid volume significantly exceeds
+the ask volume
+imbalance_threshold = 1.5
+imbalance = order_book[order_book['cum_bid_volume'] >
+imbalance_threshold * order_book['cum_ask_volume']]
+
+print("Order book imbalance detected at price levels:")
+print(imbalance['price'])
+```
