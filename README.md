@@ -13,18 +13,18 @@ Unos pocos scripts para la red 🇪🇸
 - XGBoost / LightGBM / CatBoost
 
 #### Deep Learning
-PyTorch
-TensorFlow / Keras
-Hugging Face (Transformers, Accelerate, Datasets)
+- PyTorch
+- TensorFlow / Keras
+- Hugging Face (Transformers, Accelerate, Datasets)
 
 #### LLM & GenAI
-LangChain / LlamaIndex
-OpenAI Python SDK / Anthropic SDK
-Векторные базы данных
+- LangChain / LlamaIndex
+- OpenAI Python SDK / Anthropic SDK
+- Векторные базы данных
 
 #### MLOps
-FastAPI 
-Streamlit / Gradio
-Pydantic
-MLflow / Weights & Biases (W&B)
+- FastAPI 
+- Streamlit / Gradio
+- Pydantic
+- MLflow / Weights & Biases (W&B)
 
