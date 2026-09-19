@@ -63,8 +63,7 @@ otc_data = pd.read_csv('otc_liquidity.csv')
 
 # Plotting the liquidity distributions
 plt.figure(figsize=(14, 7))
-sns.kdeplot(exchange_data['liquidity'], label='Exchange-Traded',
-shade=True)
+sns.kdeplot(exchange_data['liquidity'], label='Exchange-Traded', shade=True)
 sns.kdeplot(otc_data['liquidity'], label='OTC', shade=True)
 
 plt.title('Liquidity Distribution Across Market Types')
