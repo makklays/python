@@ -4,6 +4,11 @@
 
 Unos pocos scripts para la red 🇪🇸 
 
+<p align="left">
+  <img src="images/python-ai-1.jpeg" width="400" alt="Python AI 1" />
+  <img src="images/python-ai-2.jpeg" width="400" alt="Python AI 2" />
+</p>
+
 # AI Software Engineer 
 
 ```
